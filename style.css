@@ -1,0 +1,18 @@
+/*
+Theme Name: DD Web
+Theme URI: https://ddweb.pl
+Author: DD Web
+Author URI: https://ddweb.pl
+Description: Universal WordPress theme with Blade templating, TailwindCSS and TypeScript. Perfect for modern multi-page websites with dynamic content.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: dd-web
+Tags: custom-logo, custom-menu, featured-images, flexible-header, responsive-design, translation-ready, acf, blade, tailwind
+*/
+
+/* TailwindCSS and custom styles are loaded via Vite build process */
+/* See assets/css/main.css for TailwindCSS configuration */

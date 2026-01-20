@@ -1,0 +1,9 @@
+{{-- 
+    Dodaj tutaj pliki dla poszczególnych stron
+    Nazwa pliku = slug strony
+    
+    Przykład:
+    - o-nas.blade.php → strona /o-nas
+    - kontakt.blade.php → strona /kontakt
+    - oferta.blade.php → strona /oferta
+--}}

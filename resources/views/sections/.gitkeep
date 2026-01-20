@@ -1,0 +1,10 @@
+{{-- 
+    Dodaj tutaj komponenty sekcji do użycia w flexible content
+    
+    Przykład:
+    - hero.blade.php → sekcja hero
+    - text.blade.php → sekcja tekstu
+    - gallery.blade.php → galeria
+    - cta.blade.php → call to action
+    - image-text.blade.php → obraz + tekst
+--}}
