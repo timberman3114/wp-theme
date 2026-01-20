@@ -146,7 +146,12 @@ class ThemeSetup {
         
         // Check if we're in development mode (manifest doesn't exist)
         $manifest_path = get_template_directory() . '/dist/manifest.json';
-        $is_dev = !file_exists($manifest_path);
+        $vite_manifest_path = get_template_directory() . '/dist/.vite/manifest.json';
+        
+        // Vite 5 places manifest under .vite/ by default when using manifest: true
+        $has_manifest = file_exists($manifest_path) || file_exists($vite_manifest_path);
+        $active_manifest_path = file_exists($manifest_path) ? $manifest_path : $vite_manifest_path;
+        $is_dev = !$has_manifest;
         
         if ($is_dev) {
             // Development mode - load from Vite dev server
@@ -176,7 +181,7 @@ class ThemeSetup {
             );
         } else {
             // Production mode - load compiled assets
-            $manifest = json_decode(file_get_contents($manifest_path), true);
+            $manifest = json_decode(file_get_contents($active_manifest_path), true);
             
             // Enqueue compiled CSS
             if (isset($manifest['assets/css/main.css'])) {

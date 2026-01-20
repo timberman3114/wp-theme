@@ -16,8 +16,10 @@ $blade_file = "pages.{$page_slug}";
 $blade_path = get_template_directory() . "/resources/views/pages/{$page_slug}.blade.php";
 
 if (file_exists($blade_path)) {
-    // Jeśli istnieje plik dla tego slug, użyj go
-    echo blade($blade_file);
+    // Jeśli istnieje plik dla tego slug, wstrzyknij go do domyślnego layoutu
+    echo blade('layouts.default', [
+        'contentView' => $blade_file,
+    ]);
 } else {
     // W przeciwnym razie użyj domyślnego template
     echo blade('page');

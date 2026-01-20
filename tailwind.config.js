@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import colors from 'tailwindcss/colors'
+
 export default {
   content: [
     "./resources/views/**/*.blade.php",
@@ -24,21 +26,24 @@ export default {
         'nunito': ['Nunito', 'sans-serif'],
       },
       colors: {
-        'primary': '#111827',
-        'light_primary': '#18202F',
-        'secondary': '#60A5FA',
-        'border': '#1F2937',
-        'dark_screen': '#1a2530',
-        'screen_border': '#2c3e50',
-        'green': '#2ecc71',
-        'blue': '#3498db',
-        'red': '#e74c3c',
-        'orange': '#f39c12',
-        'light_gray': '#9CA3AF',
-        'bg_section': '#0c1322',
-        'box_bg': '#10192d',
-        'box_border': '#182543',
-        'box_icon': '#182e55',
+        // Full palettes for utility variants like -300/-600
+        primary: colors.indigo,
+        secondary: colors.sky,
+        
+        // Single-value tokens
+        light_primary: '#18202F',
+        border: '#1F2937',
+        dark_screen: '#1a2530',
+        screen_border: '#2c3e50',
+        green: '#2ecc71',
+        blue: '#3498db',
+        red: '#e74c3c',
+        orange: '#f39c12',
+        light_gray: '#9CA3AF',
+        bg_section: '#0c1322',
+        box_bg: '#10192d',
+        box_border: '#182543',
+        box_icon: '#182e55',
       },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],        // 12px / 16px
